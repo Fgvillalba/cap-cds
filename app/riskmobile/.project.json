@@ -1,0 +1,48 @@
+{
+	"Credential": "cf",
+	"Template": {
+		"Id": "@ext-mdkvsc-npm-dev/generator-mdk",
+		"Name": "CRUD",
+		"Version": "0.0.1"
+	},
+	"CF": {
+		"Target": "https://api.cf.us10-001.hana.ondemand.com",
+		"Organization": "54dcc3dd-cb9d-4a57-bf1d-ecc03afa579d",
+		"Space": "f281185b-9713-4bf6-86a5-5363fe38b1bb"
+	},
+	"MobileService": {
+		"Type": "standard",
+		"AdminAPI": "https://mobile-service-cockpit-api.cfapps.us10.hana.ondemand.com/cockpit/v1/org/54dcc3dd-cb9d-4a57-bf1d-ecc03afa579d/space/f281185b-9713-4bf6-86a5-5363fe38b1bb",
+		"AppId": "lcap.riskmanagement.riskmobile",
+		"Destination": [],
+		"Create": true,
+		"DestinationName": "RiskManagementService",
+		"DestinationUrl": "https://3061daf8trial-dev-riskmanagement-srv.cfapps.us10-001.hana.ondemand.com/service/riskmanagementSvcs",
+		"Uaa": "riskmanagement-uaa"
+	},
+	"Onboarding": {
+		"Schema": "sapmobilesvcs",
+		"TimeZone": "UTC",
+		"URL": "sapmobilesvcs://?AppId=lcap.riskmanagement.riskmobile&ClientId=bad678d9-42ee-4b10-a3db-096fa8756781&ServerUrl=https://3061daf8trial-dev-lcap-riskmanagement-riskmobile.cfapps.us10-001.hana.ondemand.com&SapCloudPlatformEndpoint=https://3061daf8trial-dev-lcap-riskmanagement-riskmobile.cfapps.us10-001.hana.ondemand.com&AuthorizationEndpointUrl=https://3061daf8trial-dev-lcap-riskmanagement-riskmobile.cfapps.us10-001.hana.ondemand.com/oauth2/api/v1/authorize&RedirectUrl=https://3061daf8trial-dev-lcap-riskmanagement-riskmobile.cfapps.us10-001.hana.ondemand.com&TokenUrl=https://3061daf8trial-dev-lcap-riskmanagement-riskmobile.cfapps.us10-001.hana.ondemand.com/oauth2/api/v1/token&multiUser=false"
+	},
+	"LCAP": {
+		"FullName": "RiskMobile",
+		"Service": [
+			{
+				"mdk": "riskmobile/Services/RiskManagementService.service",
+				"cap": {
+					"name": "RiskManagementService",
+					"sourcePath": "srv/service.cds",
+					"path": "/service/riskmanagementSvcs/",
+					"entryPath": "/service/riskmanagementSvcs",
+					"destination": "riskmanagement-app-srv",
+					"value": "1"
+				}
+			}
+		],
+		"sourceTemplate": {
+			"id": "html5moduletemplates.basicSAPUI5ApplicationProjectModule",
+			"version": "1.40.12"
+		}
+	}
+}
